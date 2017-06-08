@@ -27,3 +27,9 @@ There are my dummy client credentials are provided, you can still use them or re
 * Send attachments upto 35mb of size
 * Drag and drop to add attachments
 * Notifications for various warning and information messages
+* Gmail like query search feature
+* caching of emails using database to reduce time to review any email
+
+## Screenshot
+
+![desktop gmail client](https://github.com/ashoknailwal/desktop-gmail-client/blob/master/desktop%20gmail%20client.png)
