@@ -1,0 +1,6 @@
+.jfx-snackbar-content{
+    -fx-background-color: #7D7D7D;
+}
+.jfx-snackbar-toast{
+    -fx-text-fill: #ffffff;
+}

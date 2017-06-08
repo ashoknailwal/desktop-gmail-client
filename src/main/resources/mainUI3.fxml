@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainUI3Controller">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="115.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="TOP_CENTER" layoutY="-6.0" prefHeight="591.0" prefWidth="100.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+               <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="244.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <JFXButton fx:id="composeButton" buttonType="RAISED" onAction="#composeClicked" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #0091EA; -fx-background-radius: 5;" text="Compose" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <StackPane fx:id="inboxButtonParent" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                                 <children>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@inbox.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label opacity="0.5" text="Inbox">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="sentButtonParent" prefHeight="40.0" prefWidth="115.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@sentGrey.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label opacity="0.5" text="Sent">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="draftButtonParent" prefHeight="40.0" prefWidth="115.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@drafts.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label opacity="0.5" text="Drafts">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="trashButtonParent" prefHeight="40.0" prefWidth="115.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@delete.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label opacity="0.5" text="Trash">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <center>
+                        <ImageView fitHeight="82.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@account_circle_grey_192x192.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <bottom>
+                        <JFXButton fx:id="logout" buttonType="RAISED" onAction="#logoutFromGmail" style="-fx-background-color: #0091EA;" text="Logout" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </GridPane>
+
+         </children></AnchorPane>
+   </left>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowSpan="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="447.0" minHeight="10.0" prefHeight="352.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane fx:id="messageListViewParent" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </StackPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="483.0" BorderPane.alignment="CENTER_RIGHT">
+                           <children>
+                              <Label text="All">
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children></HBox>
+                     </bottom>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <HBox alignment="CENTER_LEFT" prefHeight="89.0" prefWidth="175.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Region prefHeight="89.0" prefWidth="38.0" />
+                                    <Label fx:id="folderLabel" opacity="0.5" text="INBOX">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </left>
+                           <right>
+                              <StackPane alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="213.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="searchTextField" onAction="#performSearchForTextField">
+                                       <StackPane.margin>
+                                          <Insets right="10.0" />
+                                       </StackPane.margin>
+                                    </TextField>
+                                    <ImageView fx:id="searchImage" fitHeight="21.0" fitWidth="21.0" onMouseClicked="#performSearchFromImage" pickOnBounds="true" preserveRatio="true">
+                                       <StackPane.margin>
+                                          <Insets right="10.0" />
+                                       </StackPane.margin>
+                                       <image>
+                                          <Image url="@search2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets right="10.0" />
+                                 </BorderPane.margin>
+                              </StackPane>
+                           </right>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
+            <StackPane fx:id="componentDisplayContainer" GridPane.columnIndex="1" GridPane.rowSpan="3" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
