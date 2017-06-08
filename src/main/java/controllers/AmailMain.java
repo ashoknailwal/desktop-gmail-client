@@ -39,7 +39,7 @@ public class AmailMain extends Application {
 
         //Group root = new Group();
         //root.getChildren().addAll(mainController);
-        primaryStage.setTitle("Amail");
+        primaryStage.setTitle("Desktop Gmail Client");
         Scene scene = new Scene(mainController, 1080, 600);
         scene.getStylesheets().add(getClass().getResource("/sneckbar.css").toExternalForm());
         primaryStage.setScene(scene);
